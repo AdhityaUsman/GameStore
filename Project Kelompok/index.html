@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore Social - Jual Beli Akun & Item Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🎮 GameStore Social</div>
+        <nav>
+            <a href="#katalog">Katalog</a>
+            <a href="#testimoni">Testimoni</a>
+            <a href="#kontak">Rekber & Kontak</a>
+        </nav>
+        <button id="theme-toggle" class="theme-btn">☀️ / 🌙 Tema</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Jual Beli Akun & Item Game Terpercaya</h1>
+            <p>Transaksi aman via Rekber, proses cepat, harga kompetitif via WhatsApp, FB, & IG.</p>
+            <a href="#katalog" class="btn-primary">Lihat Katalog Game</a>
+        </section>
+
+        <section id="katalog" class="container">
+            <h2>Katalog Akun & Item Populer</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="mlbb">Mobile Legends</button>
+                <button class="filter-btn" data-filter="valorant">Valorant</button>
+                <button class="filter-btn" data-filter="genshin">Genshin Impact</button>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Produk dimuat dinamis lewat JavaScript -->
+            </div>
+        </section>
+
+        <section id="testimoni" class="container">
+            <h2>Testimoni Pelanggan & Bukti Rekber</h2>
+            <div class="testimonial-grid" id="testimonial-grid">
+                <!-- Testimoni dimuat dinamis lewat JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GameStore Social. Aman, Cepat, Terpercaya.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
