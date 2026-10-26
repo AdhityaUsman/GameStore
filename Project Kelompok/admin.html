@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore Social - Dashboard Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🛠️ Admin Dashboard - GameStore</div>
+        <nav>
+            <a href="user.html" target="_blank">Lihat Halaman Utama</a>
+        </nav>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn">☀️ / 🌙</button>
+            <button id="logout-btn" class="btn-delete" style="padding: 0.4rem 0.8rem;">Keluar</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="admin-header-box" style="margin-bottom: 2rem;">
+            <h2>Kelola Katalog Produk Game</h2>
+            <button id="open-add-modal" class="btn-primary">＋ Tambah Katalog Baru</button>
+        </div>
+
+        <div class="product-grid" id="admin-product-grid">
+            <!-- Produk admin dimuat dinamis -->
+        </div>
+    </main>
+
+    <!-- Modal Form Tambah/Edit Katalog & Status -->
+    <div id="product-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <h2 id="modal-title">Tambah Katalog Produk</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <div class="form-group">
+                    <label for="prod-title">Judul Akun / Item</label>
+                    <input type="text" id="prod-title" placeholder="Contoh: Akun MLBB Mythic..." required>
+                </div>
+                <div class="form-group">
+                    <label for="prod-category">Kategori Game</label>
+                    <select id="prod-category" required>
+                        <option value="mlbb">Mobile Legends</option>
+                        <option value="valorant">Valorant</option>
+                        <option value="genshin">Genshin Impact</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="prod-price">Harga (Rp)</label>
+                    <input type="text" id="prod-price" placeholder="Contoh: Rp 750.000" required>
+                </div>
+                <div class="form-group">
+                    <label for="prod-status">Status Ketersediaan</label>
+                    <select id="prod-status" required>
+                        <option value="available">Masih Tersedia</option>
+                        <option value="sold">Sudah Terjual</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="prod-desc">Deskripsi Spesifikasi</label>
+                    <textarea id="prod-desc" rows="3" placeholder="Contoh: Full badge, skin epic banyak..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Simpan Produk</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 GameStore Social. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -3,51 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameStore Social - Jual Beli Akun & Item Game</title>
+    <title>GameStore Social - Masuk / Daftar</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="navbar">
-        <div class="logo">🎮 GameStore Social</div>
-        <nav>
-            <a href="#katalog">Katalog</a>
-            <a href="#testimoni">Testimoni</a>
-            <a href="#kontak">Rekber & Kontak</a>
-        </nav>
-        <button id="theme-toggle" class="theme-btn">☀️ / 🌙 Tema</button>
-    </header>
-
-    <main>
-        <section class="hero">
-            <h1>Jual Beli Akun & Item Game Terpercaya</h1>
-            <p>Transaksi aman via Rekber, proses cepat, harga kompetitif via WhatsApp, FB, & IG.</p>
-            <a href="#katalog" class="btn-primary">Lihat Katalog Game</a>
-        </section>
-
-        <section id="katalog" class="container">
-            <h2>Katalog Akun & Item Populer</h2>
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all">Semua</button>
-                <button class="filter-btn" data-filter="mlbb">Mobile Legends</button>
-                <button class="filter-btn" data-filter="valorant">Valorant</button>
-                <button class="filter-btn" data-filter="genshin">Genshin Impact</button>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="logo-auth">🎮 GameStore Social</div>
+            
+            <!-- Tab Navigasi Login / Register -->
+            <div class="auth-tabs">
+                <button id="tab-login" class="tab-btn active" onclick="switchTab('login')">Masuk</button>
+                <button id="tab-register" class="tab-btn" onclick="switchTab('register')">Daftar Akun</button>
             </div>
-            <div class="product-grid" id="product-grid">
-                <!-- Produk dimuat dinamis lewat JavaScript -->
-            </div>
-        </section>
 
-        <section id="testimoni" class="container">
-            <h2>Testimoni Pelanggan & Bukti Rekber</h2>
-            <div class="testimonial-grid" id="testimonial-grid">
-                <!-- Testimoni dimuat dinamis lewat JavaScript -->
-            </div>
-        </section>
-    </main>
+            <!-- Form Login -->
+            <form id="login-form" class="auth-form">
+                <h2>Masuk ke Akun</h2>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="login-user" placeholder="Masukkan username..." required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="login-pass" placeholder="Masukkan password..." required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Masuk</button>
+            </form>
 
-    <footer>
-        <p>&copy; 2026 GameStore Social. Aman, Cepat, Terpercaya.</p>
-    </footer>
+            <!-- Form Register -->
+            <form id="register-form" class="auth-form hidden">
+                <h2>Buat Akun Baru</h2>
+                <div class="form-group">
+                    <label>Username Baru</label>
+                    <input type="text" id="reg-user" placeholder="Buat username..." required>
+                </div>
+                <div class="form-group">
+                    <label>Password Baru</label>
+                    <input type="password" id="reg-pass" placeholder="Buat password..." required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; background-color: #25D366;">Daftar Sekarang</button>
+            </form>
+        </div>
+        <div class="theme-toggle-auth">
+            <button id="theme-toggle" class="theme-btn">☀️ / 🌙 Ganti Tema</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

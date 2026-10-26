@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore Social - Beranda Utama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🎮 GameStore Social</div>
+        <nav>
+            <a href="user.html" class="active">Katalog</a>
+            <a href="#testimoni">Testimoni</a>
+            <a href="#tambah-testimoni">Beri Ulasan</a>
+        </nav>
+        <div class="nav-actions">
+            <span id="user-greeting" style="font-weight: 500; font-size: 0.9rem;"></span>
+            <button id="theme-toggle" class="theme-btn">☀️ / 🌙</button>
+            <button id="logout-btn" class="btn-delete" style="padding: 0.4rem 0.8rem;">Keluar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Jual Beli Akun & Item Game Terpercaya</h1>
+            <p>Transaksi aman via Rekber, proses cepat, harga kompetitif via WhatsApp, FB, & IG.</p>
+            <a href="#katalog" class="btn-primary">Lihat Katalog Game</a>
+        </section>
+
+        <section id="katalog" class="container">
+            <h2>Katalog Akun & Item Populer</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="mlbb">Mobile Legends</button>
+                <button class="filter-btn" data-filter="valorant">Valorant</button>
+                <button class="filter-btn" data-filter="genshin">Genshin Impact</button>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Katalog dimuat dinamis dengan keterangan status -->
+            </div>
+        </section>
+
+        <section id="testimoni" class="container">
+            <h2>Testimoni Pelanggan & Bukti Rekber</h2>
+            <div class="testimonial-grid" id="testimonial-grid">
+                <!-- Testimoni dimuat dinamis -->
+            </div>
+        </section>
+
+        <section id="tambah-testimoni" class="container">
+            <h2>Kirim Testimoni & Rating Anda</h2>
+            <form id="testimonial-form" class="review-form">
+                <div class="form-group">
+                    <label for="reviewer-name">Nama Lengkap</label>
+                    <input type="text" id="reviewer-name" placeholder="Masukkan nama Anda..." required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewer-rating">Rating (Bintang)</label>
+                    <select id="reviewer-rating" required>
+                        <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ (Sangat Puas)</option>
+                        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ (Puas)</option>
+                        <option value="⭐⭐⭐">⭐⭐⭐ (Cukup)</option>
+                        <option value="⭐⭐">⭐⭐ (Kurang)</option>
+                        <option value="⭐">⭐ (Sangat Kurang)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reviewer-comment">Komentar / Pengalaman Transaksi</label>
+                    <textarea id="reviewer-comment" rows="4" placeholder="Tuliskan pengalaman transaksi via rekber di sini..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Kirim Ulasan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GameStore Social. Aman, Cepat, Terpercaya.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
